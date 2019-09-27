@@ -26,7 +26,7 @@ const TERMINATED = 'terminated';
 // Detect Safari to work around Safari-specific bugs.
 const IS_SAFARI = typeof safari === 'object' && safari.pushNotification;
 
-const SUPPORTS_PAGE_TRANSITION_EVENTS = 'onpageshow' in self;
+const SUPPORTS_PAGE_TRANSITION_EVENTS = typeof self === 'object' && 'onpageshow' in self;
 
 const EVENTS = [
   'focus',
